@@ -1,0 +1,174 @@
+html body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+div,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  padding: 0;
+  margin: 0;
+  border: none;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Helvetica Neue For Number", "-apple-system",
+    "BlinkMacSystemFont", "Segoe UI", "Roboto", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  background: #fff;
+}
+img {
+  overflow: hidden;
+  border-style: none;
+}
+
+img[src=""],
+img:not([src]) {
+  opacity: 0;
+}
+
+/* 取消链接高亮  */
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+}
+
+/* 设置HTML5元素为块 */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+input,textarea {
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+section{
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  background: #ffffff;
+}
+
+button {
+  display: block;
+  outline: none;
+  background-color: transparent;
+}
+#app {
+  height: 100%;
+}
+.text12{
+  font-size: 12px !important;
+}
+.text14{  
+  font-size: 15px !important;
+}
+.text13{
+  font-size: 13px !important;
+}
+.text-color999{
+  color:#999999;
+}
+.gradual-btn{
+  // 渐变色按钮
+  background-image: linear-gradient(
+    -135deg,
+    rgba(0, 112, 58, 0.6) 0%,
+    #03c061 100%
+  );
+}
+.search-btn{
+   // 按钮
+  background: #03C061;
+  border-color: #03C061;
+}
+.clear-btn{
+  // 取消按钮
+  background:#AEBAB4;
+  border-color:#AEBAB4;
+}
+.confirm-btn{
+  //确定按钮
+  background:#00703A;
+  border-color:#00703A;
+}
+.theme-colors{
+  //主题文字颜色
+  color: #03c061  !important; 
+}
+.theme-colors-text-btn{
+  color:#00703A  !important; 
+}
+.theme-background-colors{
+  ///主题背景颜色
+  background: #03c061  !important; 
+}
+.selectPlaceholder{
+  color: #999999 !important;
+}
+.selectborder{
+  border-color: #999999 transparent transparent transparent !important;
+}
+.money-text{
+  position: relative;
+  .right-text{
+    position: absolute;
+    right: 5%;
+    z-index: 8;
+    font-size: 13px;
+    line-height: 44px;
+    top: 0px;
+    color: #999;
+  }
+}
