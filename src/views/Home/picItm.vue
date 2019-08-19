@@ -58,14 +58,14 @@ export default {
   mounted() {
     let that = this;
     let dom = document.getElementById(this.itm.id)
-      console.log('moveDiv',this.itm.id,dom,document.getElementById(this.itm.id))
+      // console.log('moveDiv',this.itm.id,dom,document.getElementById(this.itm.id))
   },
   destroyed() {},
   updated() {},
   methods: {
     // 实现移动端拖拽
     down() {
-      console.log('down-event',event)
+      // console.log('down-event',event)
       let dom = document.getElementById(this.itm.id)
       this.flags = true;
       var touch;
@@ -80,7 +80,7 @@ export default {
       this.dy = dom.offsetTop;
     },
     move() {
-      console.log('move-event',event,)
+      // console.log('move-event',event,)
       let dom = document.getElementById(this.itm.id)
       
       
