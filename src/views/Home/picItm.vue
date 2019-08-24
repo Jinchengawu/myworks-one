@@ -13,8 +13,8 @@
       @mouseup="end"
       @touchend="end"
     >
-      <div class="yuanqiu">{{itm.id}}</div>
-       <img style="width:100%;height:100%;" :src="itm.picUrl" alt="">
+      <!-- <div class="yuanqiu">{{itm.id}}</div> -->
+       <img style="width:30px;height:60px;" :src="itm.picUrl" alt="">
     </div>    
   </div>
 </template>
@@ -54,7 +54,9 @@ export default {
     };
   },
   watch: {},
-  created() {},
+  created() {
+    console.log('item',this.itm)
+  },
   mounted() {
     let that = this;
     let dom = document.getElementById(this.itm.id)
@@ -119,25 +121,25 @@ export default {
 <style lang="less" scoped>
 
 .xuanfu {
-  height: 4.5rem;
-  width: 4.5rem;
+  height: 50px;
+  width: 50px;
   /*1.3  如果碰到滑动问题，请检查 z-index。z-index需比web大一级*/
   z-index: 999;
   position: fixed;
-  top: 4.2rem;
+  top: 2.2rem;
   right: 3.2rem;
   border-radius: 0.8rem;
   background-color: rgba(0, 0, 0, 0.55);
   //  transition: top left right bottom 1s;
 }
 .yuanqiu {
-  height: 2.7rem;
-  width: 2.7rem;
+  height: 50px;
+  width: 50px;
   border: 0.3rem solid rgba(140, 136, 136, 0.5);
   margin: 0.65rem auto;
   color: #000000;
-  font-size: 1.6rem;
-  line-height: 2.7rem;
+  font-size: 16px;
+  line-height: 50px;
   text-align: center;
   border-radius: 100%;
   background-color: #ffffff;

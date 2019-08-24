@@ -3,13 +3,16 @@
     <img
       class="bg"
       style
-      src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564815535655&di=33ea559bd9b257ff5f5636d65768b016&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201508%2F07%2F20150807230802_tXAaH.jpeg"
+      :src="datas[pages-1].bg"
       alt
     />
     <zhezhao></zhezhao>
     <div>你的web页面</div>
     <div class="z1" v-if="type.z1">
       <img src="https://i.loli.net/2019/08/03/te8g64OMpVqAUSC.png" alt />
+    </div>
+    <div class="z1" v-if="type.z2">
+      <img src="@img/hjlx.png" alt />
     </div>
     <!-- 1.1 如果碰到滑动问题，请检查这里是否属于同一点。 -->
     <!-- 悬浮的HTML -->
@@ -37,6 +40,21 @@
     >
       <div class="fang1" v-bind:class="{ borderactive: isActive }">
         <div class="fang2" v-bind:class="{ active: isActive }"></div>
+      </div>
+      <button class="fang3">井字线</button>
+    </div>
+     <div
+      class="zhezhao"
+      style="left:150px;"
+      type="primary"
+      size="small"
+      @click="()=>{
+      type.z2 = !type.z2
+      isActive2 = !isActive2
+    }"
+    >
+      <div class="fang1" v-bind:class="{ borderactive: isActive2 }">
+        <div class="fang2" v-bind:class="{ active: isActive2 }"></div>
       </div>
       <button class="fang3">辅助线</button>
     </div>
@@ -78,14 +96,15 @@ export default {
             {
               id: "i1-1",
               name: "22",
-              picUrl: "https://i.loli.net/2019/08/03/qBV7MxgTNkaHoP2.jpg"
+              picUrl: "@img/bdlsdfd_rw.png"
             },
             {
               id: "i1-2",
               name: "33",
               picUrl: "https://i.loli.net/2019/08/03/bGjDgZlOtSf2Yr5.jpg"
             }
-          ]
+          ],
+          bg:'@img/bdlsdfd.png'
         },
         {
           txts: {
@@ -97,7 +116,7 @@ export default {
             {
               id: "i2-1",
               name: "22",
-              picUrl: "https://i.loli.net/2019/08/03/qBV7MxgTNkaHoP2.jpg"
+              picUrl: ""
             },
             {
               id: "i2-2",
@@ -116,7 +135,7 @@ export default {
             {
               id: "i3-1",
               name: "22",
-              picUrl: "https://i.loli.net/2019/08/03/qBV7MxgTNkaHoP2.jpg"
+              picUrl: ""
             },
             {
               id: "i3-2",
@@ -131,7 +150,8 @@ export default {
         z1: false,
         z2: false
       }, //遮招层状态
-      isActive: false
+      isActive: false,
+      isActive2: false,
     };
   },
   watch: {},
